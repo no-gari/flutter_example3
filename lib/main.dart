@@ -10,33 +10,24 @@ class MyApp extends StatelessWidget{
     return MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.teal,
-        body: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children : <Widget>[
-            Container(
-              color: Colors.red,
-              width: 100.0,
-            ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Container(
-                  color: Colors.yellow,
-                  width: 100.0,
-                  height: 100.0,
-                ),
-                Container(
-                  color: Colors.green,
-                  width: 100.0,
-                  height: 100.0,
-                ),
-              ],
-            ),
-            Container(
-              color: Colors.blue,
-              width: 100.0,
-            ),
-          ],
+        body: SafeArea(
+          child: Column(
+            children: <Widget>[
+              CircleAvatar(
+                radius: 50.0,
+                backgroundColor: Colors.blue,
+                backgroundImage: NetworkImage('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQEclOY26bFguA_kb5E6qBN3eVpYX8TQrqc2A&usqp=CAU'),
+              ),
+                Text(
+                  '저커버그ㅋㅋ',
+                  style: TextStyle(
+                    fontSize: 40.0,
+                    color: Colors.white,
+                    fontWeight: FontWeight.w900,
+                  ),
+                )
+            ],
+          ),
         ),
       ),
     );
