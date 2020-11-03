@@ -38,51 +38,41 @@ class MyApp extends StatelessWidget{
                       color: Colors.teal[100],
                     ),
                   ),
-                Card(
-                  color: Colors.white,
-                  margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
-                  child: Padding(
-                    padding: const EdgeInsets.all(20.0),
-                    child: Row(
-                      children:<Widget> [
-                        Icon(Icons.phone,
-                        color: Colors.teal,),
-                        SizedBox(
-                          width: 10.0,
-                        ),
-                        Text(
-                          '010-1234-1234',
-                          style: TextStyle(
-                            color: Colors.teal[900],
-                            fontSize: 20.0,
-                            fontFamily: 'SourceSansPro',
-                          ),
-                        )
-                      ],
-                    ),
+                SizedBox(
+                  width: 150.0,
+                  height: 20.0,
+                  child: Divider(
+                    color: Colors.teal.shade100,
                   ),
                 ),
                 Card(
                   color: Colors.white,
                   margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
-                  child: Padding(
-                    padding: const EdgeInsets.all(20.0),
-                    child: Row(
-                      children:<Widget> [
-                        Icon(Icons.email,
-                          color: Colors.teal,),
-                        SizedBox(
-                          width: 10.0,
+                  child: ListTile(
+                      leading: Icon(Icons.phone, color: Colors.teal),
+                      title : Text(
+                        '010-1234-1234',
+                        style: TextStyle(
+                          color: Colors.teal.shade900,
+                          fontFamily: 'SourceSansPro',
+                          fontSize: 20.0,
                         ),
-                        Text(
-                          'hihi@hihi.com',
-                          style: TextStyle(
-                            color: Colors.teal[900],
-                            fontSize: 20.0,
-                            fontFamily: 'SourceSansPro',
-                          ),
-                        )
-                      ],
+                      )
+                    ),
+                ),
+                Card(
+                  color: Colors.white,
+                  margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+                  child: ListTile(
+                    leading: Icon(Icons.email,
+                      color: Colors.teal,),
+                    title: Text(
+                      'hihi@hihi.com',
+                      style: TextStyle(
+                        color: Colors.teal[900],
+                        fontSize: 20.0,
+                        fontFamily: 'SourceSansPro',
+                      ),
                     ),
                   ),
                 )
